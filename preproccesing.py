@@ -11,7 +11,7 @@ def load_data():
     y_train = []
 
     for i in range( 5,7 ):
-        tmp = pd.read_csv( 'C:/Users/Nikos/Desktop/ML_Project/data/train%d', i, header=None, sep=" " )
+        tmp = pd.read_csv( 'C:/Users/Nikos/Desktop/ML_Project/ml_project/data/train%d' % i, header=None, sep=" " )
         #build labels - one hot vector
         hot_vector = [ 1 if j == i else 0 for j in range(5,7) ]
         
@@ -32,7 +32,7 @@ def load_data():
     y_test = []
 
     for i in range( 5,7 ):
-        tmp = pd.read_csv( 'data/mnist/test%d.txt' % i, header=None, sep=" " )
+        tmp = pd.read_csv( 'C:/Users/Nikos/Desktop/ML_Project/ml_project/data/test%d' % i, header=None, sep=" " )
         #build labels - one hot vector
         
         hot_vector = [ 1 if j == i else 0 for j in range(5,7) ]
